@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>elf::MainWindow</class>
+ <widget class="QMainWindow" name="elf::MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>854</width>
+    <height>570</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="NavigatorBar" name="navigatorBar"/>
+      </item>
+      <item>
+       <widget class="MovieContentView" name="movieContentView" native="true">
+        <property name="minimumSize">
+         <size>
+          <width>0</width>
+          <height>0</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
+     <widget class="FileSystemTreeView" name="fileSystemTreeView"/>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>854</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="ImportMenu">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="ActionImport"/>
+   </widget>
+   <addaction name="ImportMenu"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="ActionImport">
+   <property name="text">
+    <string>Import</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>FileSystemTreeView</class>
+   <extends>QTreeView</extends>
+   <header>FileSystemTreeView.h</header>
+  </customwidget>
+  <customwidget>
+   <class>MovieContentView</class>
+   <extends>QWidget</extends>
+   <header>MovieContentView.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NavigatorBar</class>
+   <extends>QListWidget</extends>
+   <header>NavigatorBar.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
